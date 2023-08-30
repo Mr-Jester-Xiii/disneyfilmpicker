@@ -1,0 +1,43 @@
+<?php
+// Session start for choosefilm array
+session_start();
+$_SESSION['filmarray'] = array();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Film Randomizer</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src=script.js defer></script>
+</head>
+<body>
+
+   <div class="container">
+       <div class="title">
+        <!-- String 1 -->
+        <p>Random <br> Disney Film <br> Generator</p>
+       </div>
+       <div class="countdown">
+        <!-- String 2 -->
+        <p> Days Untill Disney</p>
+           <?php
+        $now = time();
+        $theday = strtotime("2023-09-04");
+        $datediff = $now - $theday;
+        ?>
+        <div class='timer'> 
+            <?php echo "<p>" . abs(round($datediff / (60 * 60 * 24))) . "</p>"?> 
+        </div>
+       </div>
+       <div class="filmchoice"></div>
+       <div class="btnbox">
+            <button class = "generatebtn" onclick="chooseFilm()">Generate My Film!</button>
+       </div>
+   </div>
+
+</body>
+</html>
