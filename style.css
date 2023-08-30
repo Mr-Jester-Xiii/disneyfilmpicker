@@ -54,6 +54,14 @@ body {
   z-index: 1;
 }
 
+.date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
 
 .introtext {
   color: #ffffff;
@@ -61,6 +69,12 @@ body {
   font-size: clamp(1rem, 2.5vw, 2rem);
   text-justify: center;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  height: 180px;
+  width: 400px;
+  display: block;
+  position: absolute;
+  top: 300px;
+  text-align: center;
 }
 
 .title {
@@ -129,7 +143,14 @@ body {
   bottom: 60px;
 }
 
-.generatebtn {
+
+#date {
+  margin: 20px;
+  position: absolute;
+  top: 450px;
+}
+
+.generatebtn, .submit-btn {
   appearance: none;
   background-color: transparent;
   border: 2px solid #c2e9ff;
@@ -159,18 +180,18 @@ body {
   margin-bottom: 20%;
 }
 
-.generatebtn:disabled {
+.generatebtn:disabled, .submit-btn:disabled {
   pointer-events: none;
 }
 
-.generatebtn:hover {
+.generatebtn:hover, .submit-btn:hover {
   color: #000000;
   background-color: #c2e9ff;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
-.generatebtn:active {
+.generatebtn:active, .submit-btn:active {
   box-shadow: none;
   transform: translateY(0);
 }
@@ -178,5 +199,12 @@ body {
 .flipped {
   transform: rotateY(360deg);
   transition: 0.5s;
+}
+
+.submit-btn{
+  background-color: #000;
+  position: absolute;
+  top: 550px;
+  width: 150px;
 }
 
