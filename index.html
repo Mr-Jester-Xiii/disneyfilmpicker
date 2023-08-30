@@ -16,21 +16,35 @@ $_SESSION['filmarray'] = array();
 </head>
 <body>
 
-   <div class="container">
+    <div class = "intro">
+        <div class = "introtext">
+            <p> Let's Pick a Disney Film </p>
+            <p> When is your trip? </p>
+         </div>
+         <div class ="date">
+            <form action="#" method="GET">
+                <input type="date"id="date"min=<?php echo date("Y-m-d"); ?> required>
+                <button type = "sumbit" class ="submit-btn">Let's go!</button>
+            </form>
+         </div>
+    </div>
+
+
+   <div class="container" id="container">
        <div class="title">
         <!-- String 1 -->
         <p>Random <br> Disney Film <br> Generator</p>
        </div>
        <div class="countdown">
         <!-- String 2 -->
-        <p> Days Untill Disney</p>
+        <p> Days untill Disney</p>
            <?php
-        $now = time();
-        $theday = strtotime("2023-09-04");
-        $datediff = $now - $theday;
-        ?>
-        <div class='timer'> 
-            <?php echo "<p>" . abs(round($datediff / (60 * 60 * 24))) . "</p>"?> 
+// $now = time();
+// $theday = strtotime("2023-09-04");
+// $datediff = $now - $theday;
+?>
+        <div class='timer'>
+            <!-- <?php echo "<p>" . abs(round($datediff / (60 * 60 * 24))) . "</p>" ?> -->
         </div>
        </div>
        <div class="filmchoice"></div>

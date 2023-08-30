@@ -1,154 +1,182 @@
 html {
-    font-family: sans-serif;
-    background-image: url(/images/galerie-wallcoverings-galerie-official-disney-mickey-mouse-logo-pattern-cartoon-childrens-wallpaper-mk3015-2-p3303-7439_zoom.jpg);
-    background-size: 50%;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-  
-  .container {
-    height: 750px;
-    width: 750px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -20%;
-    margin-left: -20%;
-    background-image: url(images/Mickey_Mouse_head_and_ears.png);
-    background-size: 750px, 750px;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-    transition: 0.5s;
-  }
-  
-  .title {
-    width: 400px;
-    text-align: center;
-    margin-top: 8%;
-    font-size: 36px;
-    margin-bottom: 0%;
-  }
-  
-  .countdown {
-    font-weight: bold;
-    max-height: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5%;
-    margin-top: 10px;
-  }
-  
-  .timer {
-    font-size: 50px;
-    height: 50px;
-    color: gold;
-  }
-  
-  .filmchoice {
-    width: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .timer p {
-    margin: 0;
-  }
-  
-  .filmtitle p {
-    color: gold;
-    text-align: center;
-    font-size: clamp(1rem, 2.5vw, 2rem);
-    text-justify: center;
-  }
-  
-  .filmtitle {
-    height: 180px;
-    width: 300px;
-    display: block;
-  }
-  
-  .rating {
-    width: 400px;
-    margin: 5px;
-    font-size: 20px;
-    position: absolute;
-    bottom: 175px;
-  }
-  
-  .filmtitle {
-    position: absolute;
-    top: 300px;
-    text-align: center;
-  }
-  
-  .btnbox {
-    position: absolute;
-    bottom: 60px;
-  }
-  
-  .generatebtn {
-    appearance: none;
-    background-color: transparent;
-    border: 2px solid #c2e9ff;
-    border-radius: 15px;
-    box-sizing: border-box;
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 60px;
-    min-width: 0;
-    outline: none;
-    padding: 16px 24px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 100%;
-    will-change: transform;
-    margin-bottom: 20%;
-  }
-  
-  .generatebtn:disabled {
-    pointer-events: none;
-  }
-  
-  .generatebtn:hover {
-    color: #000000;
-    background-color: #c2e9ff;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
-  }
-  
-  .generatebtn:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  .flipped {
-    transform: rotateY(360deg);
-    transition: 0.5s;
-  }
-  
+  font-family: sans-serif;
+  background-image: url(/images/galerie-wallcoverings-galerie-official-disney-mickey-mouse-logo-pattern-cartoon-childrens-wallpaper-mk3015-2-p3303-7439_zoom.jpg);
+  background-size: 50%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  height: 750px;
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20%;
+  margin-left: -20%;
+  background-image: url(images/Mickey_Mouse_head_and_ears.png);
+  background-size: 750px, 750px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  transition: 0.5s;
+  opacity: 0%;
+}
+
+.intro {
+  height: 750px;
+  width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20%;
+  margin-left: -20%;
+  background-image: url(images/disney-castle-monogram.png);
+  background-size: 750px, 750px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+
+.introtext {
+  color: #ffffff;
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  text-justify: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.title {
+  width: 400px;
+  text-align: center;
+  margin-top: 8%;
+  font-size: 36px;
+  margin-bottom: 0%;
+}
+
+.countdown {
+  font-weight: bold;
+  max-height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+  margin-top: 10px;
+}
+
+.timer {
+  font-size: 50px;
+  height: 50px;
+  color: gold;
+}
+
+.filmchoice {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.timer p {
+  margin: 0;
+}
+
+.filmtitle p {
+  color: gold;
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  text-justify: center;
+}
+
+.filmtitle {
+  height: 180px;
+  width: 300px;
+  display: block;
+  position: absolute;
+  top: 300px;
+  text-align: center;
+}
+
+.rating {
+  width: 400px;
+  margin: 5px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 175px;
+}
+
+.btnbox {
+  position: absolute;
+  bottom: 60px;
+}
+
+.generatebtn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #c2e9ff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+  margin-bottom: 20%;
+}
+
+.generatebtn:disabled {
+  pointer-events: none;
+}
+
+.generatebtn:hover {
+  color: #000000;
+  background-color: #c2e9ff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.generatebtn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.flipped {
+  transform: rotateY(360deg);
+  transition: 0.5s;
+}
+
